@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91664E361F50F248006298C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91664E351F50F248006298C0 /* AppDelegate.swift */; };
+		91664E3B1F50F248006298C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91664E391F50F248006298C0 /* Main.storyboard */; };
+		91664E3E1F50F248006298C0 /* PomoTimer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91664E3C1F50F248006298C0 /* PomoTimer.xcdatamodeld */; };
+		91664E401F50F248006298C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91664E3F1F50F248006298C0 /* Assets.xcassets */; };
+		91664E431F50F248006298C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91664E411F50F248006298C0 /* LaunchScreen.storyboard */; };
+		91664E4B1F50F835006298C0 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91664E4A1F50F835006298C0 /* TimerViewController.swift */; };
+		91664E4D1F510B68006298C0 /* SFMono in Resources */ = {isa = PBXBuildFile; fileRef = 91664E4C1F510B68006298C0 /* SFMono */; };
+		91664E4F1F510C82006298C0 /* SFMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 91664E4E1F510C82006298C0 /* SFMono-Regular.otf */; };
+		91841F121F53458700F4BF51 /* sampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91841F111F53458700F4BF51 /* sampleVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		91664E321F50F248006298C0 /* Cirillo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cirillo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91664E351F50F248006298C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		91664E3A1F50F248006298C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91664E3D1F50F248006298C0 /* PomoTimer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PomoTimer.xcdatamodel; sourceTree = "<group>"; };
+		91664E3F1F50F248006298C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91664E421F50F248006298C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		91664E441F50F248006298C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91664E4A1F50F835006298C0 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		91664E4C1F510B68006298C0 /* SFMono */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SFMono; sourceTree = "<group>"; };
+		91664E4E1F510C82006298C0 /* SFMono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFMono-Regular.otf"; path = "PomoTimer/SFMono/SFMono-Regular.otf"; sourceTree = "<group>"; };
+		91841F111F53458700F4BF51 /* sampleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sampleVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91664E2F1F50F248006298C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91664E291F50F248006298C0 = {
+			isa = PBXGroup;
+			children = (
+				91664E4E1F510C82006298C0 /* SFMono-Regular.otf */,
+				91664E341F50F248006298C0 /* PomoTimer */,
+				91664E331F50F248006298C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91664E331F50F248006298C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91664E321F50F248006298C0 /* Cirillo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91664E341F50F248006298C0 /* PomoTimer */ = {
+			isa = PBXGroup;
+			children = (
+				91664E351F50F248006298C0 /* AppDelegate.swift */,
+				91664E4A1F50F835006298C0 /* TimerViewController.swift */,
+				91664E391F50F248006298C0 /* Main.storyboard */,
+				91841F111F53458700F4BF51 /* sampleVC.swift */,
+				91664E4C1F510B68006298C0 /* SFMono */,
+				91664E3F1F50F248006298C0 /* Assets.xcassets */,
+				91664E411F50F248006298C0 /* LaunchScreen.storyboard */,
+				91664E441F50F248006298C0 /* Info.plist */,
+				91664E3C1F50F248006298C0 /* PomoTimer.xcdatamodeld */,
+			);
+			path = PomoTimer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91664E311F50F248006298C0 /* PomoTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91664E471F50F248006298C0 /* Build configuration list for PBXNativeTarget "PomoTimer" */;
+			buildPhases = (
+				91664E2E1F50F248006298C0 /* Sources */,
+				91664E2F1F50F248006298C0 /* Frameworks */,
+				91664E301F50F248006298C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PomoTimer;
+			productName = PomoTimer;
+			productReference = 91664E321F50F248006298C0 /* Cirillo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91664E2A1F50F248006298C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Doug Gandle";
+				TargetAttributes = {
+					91664E311F50F248006298C0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6D8Y8Z8FDA;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 91664E2D1F50F248006298C0 /* Build configuration list for PBXProject "PomoTimer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 91664E291F50F248006298C0;
+			productRefGroup = 91664E331F50F248006298C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91664E311F50F248006298C0 /* PomoTimer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91664E301F50F248006298C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91664E4D1F510B68006298C0 /* SFMono in Resources */,
+				91664E431F50F248006298C0 /* LaunchScreen.storyboard in Resources */,
+				91664E401F50F248006298C0 /* Assets.xcassets in Resources */,
+				91664E3B1F50F248006298C0 /* Main.storyboard in Resources */,
+				91664E4F1F510C82006298C0 /* SFMono-Regular.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91664E2E1F50F248006298C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91841F121F53458700F4BF51 /* sampleVC.swift in Sources */,
+				91664E4B1F50F835006298C0 /* TimerViewController.swift in Sources */,
+				91664E3E1F50F248006298C0 /* PomoTimer.xcdatamodeld in Sources */,
+				91664E361F50F248006298C0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		91664E391F50F248006298C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91664E3A1F50F248006298C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		91664E411F50F248006298C0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91664E421F50F248006298C0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		91664E451F50F248006298C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91664E461F50F248006298C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91664E481F50F248006298C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6D8Y8Z8FDA;
+				INFOPLIST_FILE = PomoTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = douglasgandle.com.PomoTimer;
+				PRODUCT_NAME = Cirillo;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		91664E491F50F248006298C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6D8Y8Z8FDA;
+				INFOPLIST_FILE = PomoTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = douglasgandle.com.PomoTimer;
+				PRODUCT_NAME = Cirillo;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91664E2D1F50F248006298C0 /* Build configuration list for PBXProject "PomoTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91664E451F50F248006298C0 /* Debug */,
+				91664E461F50F248006298C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91664E471F50F248006298C0 /* Build configuration list for PBXNativeTarget "PomoTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91664E481F50F248006298C0 /* Debug */,
+				91664E491F50F248006298C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		91664E3C1F50F248006298C0 /* PomoTimer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				91664E3D1F50F248006298C0 /* PomoTimer.xcdatamodel */,
+			);
+			currentVersion = 91664E3D1F50F248006298C0 /* PomoTimer.xcdatamodel */;
+			path = PomoTimer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 91664E2A1F50F248006298C0 /* Project object */;
+}
