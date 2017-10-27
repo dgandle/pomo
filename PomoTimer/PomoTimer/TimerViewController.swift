@@ -12,7 +12,7 @@ import UIKit
 import AVFoundation
 import UserNotifications
 
-class TimerViewController: UIViewController {
+class TimerViewController: UIViewController, SettingsDelegate {
 
     enum State {
         case start
@@ -280,4 +280,18 @@ class TimerViewController: UIViewController {
         }
     }
     
+    // MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationVC = segue.destination as? UINavigationController
+        let destinationVC = navigationVC?.viewControllers.first as? SettingsViewController
+        destinationVC?.delegate = self
+    }
+    
+    
+    // MARK: Delegate Methods
+    
+    func didTapDoneButton() {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
