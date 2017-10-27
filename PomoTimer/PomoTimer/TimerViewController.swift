@@ -58,6 +58,7 @@ class TimerViewController: UIViewController, SettingsDelegate {
     @IBOutlet weak var dividerBottom: UIView!
     @IBOutlet weak var dividerVert: UIView!
     @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var statusBarBackground: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,13 +69,15 @@ class TimerViewController: UIViewController, SettingsDelegate {
         let tap = UITapGestureRecognizer(target: self, action:#selector(handleTap))
         self.view.addGestureRecognizer(tap)
         
-//        UIApplication.shared.statusBarStyle = .lightContent
-        
         registerForLocalNotifications()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func viewDidAppear(_ animated: Bool) {
+        if (darkMode) {
+            UIApplication.shared.statusBarStyle = .lightContent
+        } else {
+            UIApplication.shared.statusBarStyle = .default
+        }
     }
     
     private func registerForLocalNotifications() {
@@ -150,6 +153,7 @@ class TimerViewController: UIViewController, SettingsDelegate {
         dividerVert.backgroundColor = cColorNormalText
         settingsButton.backgroundColor = cColorSettingsBackground
         settingsButton.setTitleColor(cColorSettingsText, for: .normal)
+        statusBarBackground.backgroundColor = cColorNormalBackground
         
         updateButtons()
     }
