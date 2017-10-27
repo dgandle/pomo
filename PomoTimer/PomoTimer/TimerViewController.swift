@@ -41,10 +41,23 @@ class TimerViewController: UIViewController, SettingsDelegate {
     private var elapsedTime: Double = 0
     private var timer: Timer?
     
+    private var cColorNormalBackground = UIColor.white
+    private var cColorNormalText = UIColor.black
+    private var cColorNormalTextDisabled = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.2)
+    private var cColorTimerBackgroundActive = UIColor(red:0.18, green:0.80, blue:0.44, alpha:1.0)
+    private var cColorTimerBackgroundPaused = UIColor(red:0.95, green:0.77, blue:0.06, alpha:1.0)
+    private var cColorTimerTextActive = UIColor.white
+    private var cColorTimerTextPaused = UIColor.white
+    private var cColorSettingsBackground = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.1)
+    private var cColorSettingsText = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.5)
+    
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var bottomButton: UIButton!
     @IBOutlet weak var topButton: UIButton!
-    
+    @IBOutlet weak var dividerTop: UIView!
+    @IBOutlet weak var dividerBottom: UIView!
+    @IBOutlet weak var dividerVert: UIView!
+    @IBOutlet weak var settingsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +67,8 @@ class TimerViewController: UIViewController, SettingsDelegate {
         
         let tap = UITapGestureRecognizer(target: self, action:#selector(handleTap))
         self.view.addGestureRecognizer(tap)
+        
+//        UIApplication.shared.statusBarStyle = .lightContent
         
         registerForLocalNotifications()
     }
@@ -82,24 +97,61 @@ class TimerViewController: UIViewController, SettingsDelegate {
         case .start:
             topButton.isEnabled = false
             bottomButton.setTitle("START", for: .normal)
-            timeLabel.textColor = UIColor.black
-            timeLabel.backgroundColor = UIColor.white
+            timeLabel.textColor = cColorNormalText
+            timeLabel.backgroundColor = cColorNormalBackground
         case .active:
             topButton.isEnabled = true
             bottomButton.setTitle("PAUSE", for: .normal)
-            timeLabel.textColor = UIColor.white
-            timeLabel.backgroundColor = UIColor(red:0.18, green:0.80, blue:0.44, alpha:1.0)
+            timeLabel.textColor = cColorTimerTextActive
+            timeLabel.backgroundColor = cColorTimerBackgroundActive
         case .paused:
             topButton.isEnabled = true
             bottomButton.setTitle("RESUME", for: .normal)
-            timeLabel.textColor = UIColor.white
-            timeLabel.backgroundColor = UIColor(red:0.95, green:0.77, blue:0.06, alpha:1.0)
+            timeLabel.textColor = cColorTimerTextPaused
+            timeLabel.backgroundColor = cColorTimerBackgroundPaused
         case .rest:
             topButton.isEnabled = true
             bottomButton.setTitle("PAUSE", for: .normal)
-            timeLabel.textColor = UIColor.black
-            timeLabel.backgroundColor = UIColor.white
+            timeLabel.textColor = cColorNormalText
+            timeLabel.backgroundColor = cColorNormalBackground
         }
+    }
+    
+    func switchColors() {
+        if darkMode {
+            cColorNormalBackground = UIColor(red:0.16, green:0.16, blue:0.19, alpha:1.0) // #282830
+            cColorNormalText = UIColor.white
+            cColorNormalTextDisabled = UIColor(red:1.00, green:1.00, blue:1.00, alpha:0.2)
+            cColorTimerBackgroundActive = UIColor(red:0.16, green:0.16, blue:0.19, alpha:1.0)
+            cColorTimerBackgroundPaused = UIColor(red:0.16, green:0.16, blue:0.19, alpha:1.0)
+            cColorTimerTextActive = UIColor(red:0.18, green:0.80, blue:0.44, alpha:1.0)
+            cColorTimerTextPaused = UIColor(red:0.95, green:0.77, blue:0.06, alpha:1.0)
+            cColorSettingsBackground = UIColor(red:1.00, green:1.00, blue:1.00, alpha:0.1)
+            cColorSettingsText = UIColor(red:1.00, green:1.00, blue:1.00, alpha:0.5)
+        } else {
+            cColorNormalBackground = UIColor.white
+            cColorNormalText = UIColor.black
+            cColorNormalTextDisabled = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.2)
+            cColorTimerBackgroundActive = UIColor(red:0.18, green:0.80, blue:0.44, alpha:1.0)
+            cColorTimerBackgroundPaused = UIColor(red:0.95, green:0.77, blue:0.06, alpha:1.0)
+            cColorTimerTextActive = UIColor.white
+            cColorTimerTextPaused = UIColor.white
+            cColorSettingsBackground = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.1)
+            cColorSettingsText = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.5)
+        }
+        
+        topButton.backgroundColor = cColorNormalBackground
+        bottomButton.backgroundColor = cColorNormalBackground
+        topButton.setTitleColor(cColorNormalText, for: .normal)
+        topButton.setTitleColor(cColorNormalTextDisabled, for: .disabled)
+        bottomButton.setTitleColor(cColorNormalText, for: .normal)
+        dividerTop.backgroundColor = cColorNormalText
+        dividerBottom.backgroundColor = cColorNormalText
+        dividerVert.backgroundColor = cColorNormalText
+        settingsButton.backgroundColor = cColorSettingsBackground
+        settingsButton.setTitleColor(cColorSettingsText, for: .normal)
+        
+        updateButtons()
     }
     
     func timeString(time: TimeInterval) -> String {
@@ -299,5 +351,6 @@ class TimerViewController: UIViewController, SettingsDelegate {
     
     func didTapDarkModeSwitch() {
         self.darkMode = !self.darkMode
+        switchColors()
     }
 }
