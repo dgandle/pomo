@@ -44,7 +44,6 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var bottomButton: UIButton!
     @IBOutlet weak var topButton: UIButton!
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

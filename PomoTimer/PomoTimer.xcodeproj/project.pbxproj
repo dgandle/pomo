@@ -15,7 +15,6 @@
 		91664E4B1F50F835006298C0 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91664E4A1F50F835006298C0 /* TimerViewController.swift */; };
 		91664E4D1F510B68006298C0 /* SFMono in Resources */ = {isa = PBXBuildFile; fileRef = 91664E4C1F510B68006298C0 /* SFMono */; };
 		91664E4F1F510C82006298C0 /* SFMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 91664E4E1F510C82006298C0 /* SFMono-Regular.otf */; };
-		91841F121F53458700F4BF51 /* sampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91841F111F53458700F4BF51 /* sampleVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		91664E4A1F50F835006298C0 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		91664E4C1F510B68006298C0 /* SFMono */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SFMono; sourceTree = "<group>"; };
 		91664E4E1F510C82006298C0 /* SFMono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFMono-Regular.otf"; path = "PomoTimer/SFMono/SFMono-Regular.otf"; sourceTree = "<group>"; };
-		91841F111F53458700F4BF51 /* sampleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sampleVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,6 @@
 				91664E351F50F248006298C0 /* AppDelegate.swift */,
 				91664E4A1F50F835006298C0 /* TimerViewController.swift */,
 				91664E391F50F248006298C0 /* Main.storyboard */,
-				91841F111F53458700F4BF51 /* sampleVC.swift */,
 				91664E4C1F510B68006298C0 /* SFMono */,
 				91664E3F1F50F248006298C0 /* Assets.xcassets */,
 				91664E411F50F248006298C0 /* LaunchScreen.storyboard */,
@@ -151,7 +148,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91841F121F53458700F4BF51 /* sampleVC.swift in Sources */,
 				91664E4B1F50F835006298C0 /* TimerViewController.swift in Sources */,
 				91664E3E1F50F248006298C0 /* PomoTimer.xcdatamodeld in Sources */,
 				91664E361F50F248006298C0 /* AppDelegate.swift in Sources */,
