@@ -24,6 +24,7 @@ class TimerViewController: UIViewController, SettingsDelegate {
     var currentState: State = .start
     var previousState: State?
     var isResetting = false
+    var darkMode = false
     
     let systemSoundID: SystemSoundID = 1304
     let buttonSoundID: SystemSoundID = 1104
@@ -286,6 +287,7 @@ class TimerViewController: UIViewController, SettingsDelegate {
         let navigationVC = segue.destination as? UINavigationController
         let destinationVC = navigationVC?.viewControllers.first as? SettingsViewController
         destinationVC?.delegate = self
+        destinationVC?.darkMode = self.darkMode
     }
     
     
@@ -293,5 +295,9 @@ class TimerViewController: UIViewController, SettingsDelegate {
     
     func didTapDoneButton() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func didTapDarkModeSwitch() {
+        self.darkMode = !self.darkMode
     }
 }
