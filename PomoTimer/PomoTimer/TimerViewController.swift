@@ -8,6 +8,11 @@
 //  Copyright © 2017 Doug Gandle. All rights reserved.
 //
 
+// TODO:
+// - timer does not loop when app is running in background
+//   (start a timer -> leave the app -> notification will show, timer will finish -> next state won't begin until
+//    the app is opened again)
+
 import UIKit
 import AVFoundation
 import UserNotifications
@@ -25,6 +30,8 @@ class TimerViewController: UIViewController, SettingsDelegate {
     var previousState: State?
     var isResetting = false
     var darkMode = false
+    var buttonSound = true
+    var alarmSound = true
     
     let systemSoundID: SystemSoundID = 1304
     let buttonSoundID: SystemSoundID = 1104
@@ -309,19 +316,27 @@ class TimerViewController: UIViewController, SettingsDelegate {
         
         // start local notification (so we're notified if timer expires while app is not running)
         
-        // TODO: Update text, add handle for rest vs. active notification
+        // FIX: notifications only run once when app is running in background
         
         if #available(iOS 10, *) {
             let content = UNMutableNotificationContent()
-            content.title = "Timer expired"
-            content.body = "GET BACK TO WORK"
+            switch currentState {
+            case .active:
+                content.title = "Timer Finished"
+                content.body = "Now on break segment."
+            case .rest:
+                content.title = "Timer Finished"
+                content.body = "Now on active segment."
+            default:
+                break
+            }
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: stopTime!.timeIntervalSinceNow, repeats: false)
             let notification = UNNotificationRequest(identifier: "timer", content: content, trigger: trigger)
             UNUserNotificationCenter.current().add(notification)
         } else {
             let notification = UILocalNotification()
             notification.fireDate = stopTime
-            notification.alertBody = "Timer finished!"
+            notification.alertBody = "Timer Finished"
             UIApplication.shared.scheduleLocalNotification(notification)
         }
     }
