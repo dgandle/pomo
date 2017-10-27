@@ -66,7 +66,6 @@ class TimerViewController: UIViewController, SettingsDelegate {
         if #available(iOS 10, *) {
             UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { granted, error in
                 guard granted && error == nil else {
-                    // display error
                     print("\(String(describing: error))")
                     return
                 }
@@ -259,7 +258,7 @@ class TimerViewController: UIViewController, SettingsDelegate {
         if #available(iOS 10, *) {
             let content = UNMutableNotificationContent()
             content.title = "Timer expired"
-            content.body = "Whoo, hoo!"
+            content.body = "GET BACK TO WORK"
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: stopTime!.timeIntervalSinceNow, repeats: false)
             let notification = UNNotificationRequest(identifier: "timer", content: content, trigger: trigger)
             UNUserNotificationCenter.current().add(notification)
@@ -280,6 +279,7 @@ class TimerViewController: UIViewController, SettingsDelegate {
             UIApplication.shared.scheduledLocalNotifications?.removeAll()
         }
     }
+    
     
     // MARK: Navigation
     
